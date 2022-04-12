@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <title>Administrador de citas</title>
+</head>
+<body class="bg-slate-800 mx-4">
+       <h1 class="text-center my-8 text-cyan-400 text-2xl">Administrador de citas</h1>
+       <div class="container  bg-cyan-600 rounded-md max-w-5xl md:mx-auto">
+           <div class="md:flex justify-around mx-4 md:mx-0 pt-8 pb-12">
+                <form id="nuevaCita" class="">
+                    <legend id="datosPaciente" class="mt-8 text-2xl font-bold text-slate-900 text-center">Datos del paciente</legend>
+                    <div id="mensajeDiv" class="my-4 flex gap-4 items-baseline justify-between">
+                        <label class="text-white">Nombre del paciente:</label>
+                        <div>
+                            <input id="paciente" class="w-full rounded-sm mt-2 border" type="text" name="paciente" id="paciente" placeholder="Nombre Paciente">
+                        </div>
+                    </div>
+                    <div class="my-8 flex gap-4 items-baseline justify-between">
+                        <label class="text-white id="">Telefono:</label>
+                        <div>
+                            <input id="telefono" class="w-full rounded-sm mt-2" type="tel" name="telefono" id="telefono" placeholder="Numero Telefono">
+                        </div>
+                    </div>
+                    <div class="my-8 flex gap-4 items-baseline justify-between">
+                        <label class="text-white">Fecha:</label>
+                        <div>
+                            <input id="fecha" class="w-full rounded-sm mt-2" type="date" name="fecha" id="fecha" placeholder="fecha">
+                        </div>
+                    </div>
+                    <div class="my-8 flex gap-4 items-baseline justify-between">
+                        <label class="text-white">Hora:</label>
+                        <div>
+                            <input id="hora" class="w-full rounded-sm mt-2" type="time" name="hora" id="hora" placeholder="hora">
+                        </div>
+                    </div>
+                    <div class="my-8 flex gap-4 items-baseline justify-between">
+                        <label id="sintomas" class="text-white">Sintomas:</label>
+                        <div>
+                            <textarea class="rounded-sm" name="sintomas" id="textArea" cols="30" rows="10" name="sintomas"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" id="btnEnviar" class="w-full mb-6 p-3 bg-slate-900 rounded-md text-yellow-50 transition ease-in-out delay-150hover:-translate-y-1 hover:scale-110 hover:bg-slate-900 duration-300">Enviar Formulario</button>
+                </form>
+                <div>
+                    <legend class="mt-8 text-2xl font-bold text-slate-900 text-center">Administra tus citas</legend>
+                    <ul id="citaCreada"></ul>
+                </div>
+           </div>  <!--Display-->
+       </div> <!--contenedor--> 
+       <script src="./app.js"></script>
+</body>
+</html>
